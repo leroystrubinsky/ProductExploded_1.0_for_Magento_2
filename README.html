@@ -1,0 +1,149 @@
+<br/>
+<b>Exploded View Product 1.0</b> for Magento 2.3 &nbsp;&nbsp;Nov 30 2018<br/>
+<br/>
+<br/>
+This extension changes page layout of Magento Grouped product.<br />
+So that it is possible to upload large exploded view image and the products are listed below.<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<a name="index"></a>
+<br />
+<b>Index:</b>
+<ul>
+<li><a href="#installation">Installation</a></li><br />
+<li><a href="#how_to_use">How to use it</a></li><br/>
+<li><a href="#configuration">Configuration</a></li><br/>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+<br /> 
+<br />
+<br />
+<br />
+<a name="installation"></a>
+<br />
+<h3>Installation</h3>
+<b>1)</b> Upload 41 new files :<br/>
+<br /><font size="2">
+app/code/Pektsekye/ProductExploded/Block/Adminhtml/Pe/Product/Labels.php<br/>
+app/code/Pektsekye/ProductExploded/Block/Adminhtml/Product/Edit/Js.php<br/>
+app/code/Pektsekye/ProductExploded/Block/Product/View/Type/Grouped.php<br/>
+app/code/Pektsekye/ProductExploded/composer.json<br/>
+app/code/Pektsekye/ProductExploded/Controller/Adminhtml/Pe/Product/Labels/Index.php<br/>
+app/code/Pektsekye/ProductExploded/Controller/Adminhtml/Pe/Product/Labels.php<br/>
+app/code/Pektsekye/ProductExploded/etc/adminhtml/di.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/adminhtml/events.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/adminhtml/routes.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/adminhtml/system.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/config.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/frontend/di.xml<br/>
+app/code/Pektsekye/ProductExploded/etc/module.xml<br/>
+app/code/Pektsekye/ProductExploded/Helper/Data.php<br/>
+app/code/Pektsekye/ProductExploded/i18n/en_US.csv<br/>
+app/code/Pektsekye/ProductExploded/LICENSE.txt<br/>
+app/code/Pektsekye/ProductExploded/Model/Label.php<br/>
+app/code/Pektsekye/ProductExploded/Model/Link.php<br/>
+app/code/Pektsekye/ProductExploded/Model/Observer/ProductSaveAfter.php<br/>
+app/code/Pektsekye/ProductExploded/Model/ResourceModel/Label.php<br/>
+app/code/Pektsekye/ProductExploded/Model/ResourceModel/Link.php<br/>
+app/code/Pektsekye/ProductExploded/Plugin/GroupedProduct/Model/Product/Type/Grouped.php<br/>
+app/code/Pektsekye/ProductExploded/Plugin/GroupedProduct/Ui/DataProvider/Product/Form/Modifier/Grouped.php<br/>
+app/code/Pektsekye/ProductExploded/README.md<br/>
+app/code/Pektsekye/ProductExploded/registration.php<br/>
+app/code/Pektsekye/ProductExploded/Setup/InstallSchema.php<br/>
+app/code/Pektsekye/ProductExploded/Ui/DataProvider/Product/Form/Modifier/Labels.php<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/layout/catalog_product_new.xml<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/templates/product/edit/js.phtml<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/templates/product/labels.phtml<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/web/product/main.css<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/web/product/main.js<br/>
+app/code/Pektsekye/ProductExploded/view/adminhtml/web/template/form/components/labels_js.html<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/layout/catalog_product_view_type_grouped.xml<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/requirejs-config.js<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/templates/product/view/type/grouped.phtml<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/web/images/minus.png<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/web/images/plus.png<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/web/js/main.js<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/web/js/widget.js<br/>
+app/code/Pektsekye/ProductExploded/view/frontend/web/main.css<br/>
+</font>
+<br />
+<br />
+<b>2)</b> Connect to your website via SSH:<br>
+Type in the terminal (also known as console or command line) on your computer:<br>
+<br>
+<b>ssh -p 22 username@yourdomain.com</b><br>
+<br>
+Then enter your server password<br>
+<br>
+ If you are connected to your server change directory with command:<br>
+ <br>
+<b>cd /full_path_to_your_magento_root_directory</b><br>
+<br>
+Update magento modules with command:<br>
+<br>
+<b>bin/magento setup:upgrade</b><br>
+<br>
+NOTE: If it shows permission error make it executable with command: chmod +x bin/magento<br>
+<br>
+<br>
+<br>
+<a name="how_to_use"></a>
+<h3>Example of how to use it</h3>
+<b>1)</b> Create new or select existing Grouped product (<a href="screenshots/grouped_product.png" target="_blank">screenshot</a>)<br>
+<br>
+<b>2)</b> Upload exploded view image as "Base" product image (<a href="screenshots/main_product_image.png" target="_blank">screenshot</a>)<br>
+<br>
+<b>3)</b> Add Grouped products and set Number on Image. <br>
+These numbers will be visible on front-end and they will mean spare part numbers on the exploded view image (<a href="screenshots/number_on_image.png" target="_blank">screenshot</a>)<br>
+<br>
+<b>4)</b> Add clickable areas on the product image and move them with mouse in the Exploded View Labels section. (<a href="screenshots/add_labels.png" target="_blank">screenshot</a>)<br>
+<br>
+<b>5)</b> (Optional) To display extra product data, you can create product attribute with code "manufacturer_number" in: <br/>
+<i>Stores -&gt; Attributes -&gt; Product</i> <br/>
+Then apply it to the attribute set of your product in:<br>
+<i>Stores -&gt; Attributes -&gt; Attribute Set</i><br>
+The atribute title will be used as a column title: (<a href="screenshots/manufacturer_column.png" target="_blank">screenshot</a>)<br>
+<br>
+<b>6)</b> Check result on front-end. It should highlight products and scroll the page when you click on a selectable area (<a href="screenshots/front-end.png" target="_blank">screenshot</a>)<br>
+<br>
+<br>
+<a href="#index">Back to the index</a>
+<br>
+<br>
+<br/>
+<a name="configuration"></a>
+<h3>Configuration</h3>
+You can set attribute code for the optional Manufacturer Number column in:<br>
+<br>
+<i>Stores  -&gt; Settings -&gt; Configuration -&gt; EXPLODED VIEW PRODUCT</i> (<a href="screenshots/configuration.png" target="_blank">screenshot</a>)</font><br>
+<br>
+The attribute title will be used as column title: (<a href="screenshots/manufacturer_column.png" target="_blank">screenshot</a>)<br>
+<br/>
+The attribute should be of Text Field type and "Used in Product Listing" - YES<br/>
+<br/>
+<br>
+<a href="#index">Back to the index</a>
+<br>
+<br>
+<br/>
+<a name="troubleshooting"></a>
+<h3>Troubleshooting</h3>
+<ul>
+<li>If you are not sure whether a problem is because of this extension or not.</li><br>
+Try to disable this extension by setting:<br> 
+'Pektsekye_ProductExploded' => 0, <br> 
+<br> 
+in the file:<font size="2"><br>
+app/etc/config.php</font>
+</ul>
+<br>
+<a href="#index">Back to the index</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

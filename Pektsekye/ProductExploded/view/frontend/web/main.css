@@ -5,7 +5,7 @@
 
 .pe-image-container {position:relative; display:inline-block; max-width:100%;}
 .pe-image-container span {position:absolute;white-space:nowrap;cursor:pointer;}
-.pe-image-container span.pe-label-area {display:block; border-style:solid; border-width:2px; border-color:yellow; box-sizing: border-box;}
+.pe-image-container span.pe-label-area {display:block; border-style:solid; border-width:2px; border-color:#f9af18; box-sizing: border-box;}
 .pe-image-container span.pe-label-area.pe-active {border-color : #f9af18;}
 .pe-image-container span.pe-label-text {color: #007bdb; line-height: 1.36; font-weight: 400;}
 .pe-image-container span.pe-label-text.pe-active {color : #f9af18;}

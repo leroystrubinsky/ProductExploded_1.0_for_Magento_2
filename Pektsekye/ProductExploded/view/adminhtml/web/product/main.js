@@ -9,7 +9,7 @@ require([
   		
     lastId : 0,
     lastHintId : 0,	
-    defaultAreaSize : 40,
+    defaultAreaSize : 30,
     defaultLastTopPosition : 10,    
     lastLeftPosition : 10,    
     lastTopPosition : 0,

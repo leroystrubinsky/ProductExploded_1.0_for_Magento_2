@@ -3,7 +3,7 @@
     <?php if ($this->getImageUrl() == ''): ?>
       <div> <?php echo __('Please upload main product image, set it as base image and save the product.'); ?></div>
     <?php endif; ?>
-    <?php $i = 0; ?> 
+    <?php $i = 1; ?> 
     <?php foreach($this->getLabels() as $labelId => $label): ?> 
       <span id="pe_label_<?php echo $labelId;?>" style="left:<?php echo (int)$label['x'];?>px;top:<?php echo (int)$label['y'];?>px;<?php echo empty($label['title']) ? 'width:'.$label['width'].'px;height:'.$label['height'].'px;' : ''; ?>" class="pe-label <?php echo empty($label['title']) ? 'pe-label-area' : 'pe-label-text'; ?>" title="<?php echo $label['link_to_number'];?>">
         <span class="pe-label-hint"><?php echo $i; ?></span>
@@ -31,7 +31,7 @@
       </th>        
       <td class="pe-delete-column">&nbsp;</td>
     </tr>  
-  <?php $i = 0; ?>         
+  <?php $i = 1; ?>         
   <?php foreach($this->getLabels() as $labelId => $label): ?>
     <tr id="pe_label_row_<?php echo $labelId;?>">
       <td class="pe-hint-id"><?php echo $i;?></td>      
@@ -66,7 +66,7 @@
         lastLabelId : <?php echo (int) $this->getLastLabelId(); ?>,
         imageWidth  : <?php echo (int) $this->getImageWidth(); ?>,
         imageHeight : <?php echo (int) $this->getImageHeight(); ?>,
-        lastHintId  : <?php echo (int) count($this->getLabels()); ?>                             
+        lastHintId  : <?php echo (int) count($this->getLabels()) + 1; ?>
       });
   });   
 </script>
